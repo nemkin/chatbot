@@ -1,4 +1,4 @@
-version: "3.0"
+version: "2.0"
 
 session_config:
   session_expiration_time: 60
@@ -23,41 +23,27 @@ slots:
   confirm_exercise:
     type: text
     influence_conversation: false
-    mappings:
-      - type: custom
   exercise:
     type: any
     influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: exercise
   sleep:
     type: any
     influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: sleep
   diet:
     type: text
     influence_conversation: false
-    mappings:
-      - type: custom
   stress:
     type: any
     influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: stress
   goal:
     type: text
     influence_conversation: false
-    mappings:
-      - type: custom
 
 entities:
   - exercise
   - sleep
   - stress
+  - diet
 
 responses:
   utter_greet:
@@ -86,7 +72,7 @@ responses:
   utter_ask_exercise:
     - text: "What kind of exercise did you do?"
   utter_ask_diet:
-    - text: "Did you eat healthy yyesterday?"
+    - text: "Did you eat healthy yesterday?"
   utter_ask_stress:
     - text: "Is your stress level low, medium, or well-done?"
   utter_ask_goal:
@@ -107,12 +93,22 @@ responses:
 forms:
   health_form:
     required_slots:
-      - confirm_exercise
-      - exercise
-      - sleep
-      - diet
-      - stress
-      - goal
+      confirm_exercise:
+        - type: from_text
+      exercise:
+        - type: from_entity
+          entity: exercise
+      sleep:
+        - type: from_entity
+          entity: sleep
+      diet:
+        - type: from_entity
+          entity: diet
+      stress:
+        - type: from_entity
+          entity: stress
+      goal:
+        - type: from_text
 
 actions:
   - utter_exercise_info

@@ -1,4 +1,4 @@
-version: "3.0"
+version: "2.0"
 nlu:
   - intent: greet
     examples: |
@@ -144,26 +144,26 @@ nlu:
       - played some [basketball](exercise)
       - played [football](exercise)
       - I did a [workout](exercise) video
-      - I want to get up early and go for a run
-      - Be more patient with my family
-      - Try to be a better friend
-      - Make sure to eat better tomorrow
-      - eat less junk food
-      - eat better
-      - spend less time on my phone
-      - don't procrastinate
-      - Go to bed earlier
-      - Don't stay up so late
-      - try to make some time to meditate
-      - i ate pretty healthy overall
-      - lots of fruits and vegetables
-      - I ate a salad
-      - too many snacks
-      - too many sweets
-      - too much junk food
-      - a lot of carbs
-      - too much fatty food
-      - Get more exercise
+      - I want to [get up early and go for a run](goal)
+      - [Be more patient](goal) with my family
+      - Try to be a [better friend](goal)
+      - Make sure to [eat better tomorrow](goal)
+      - [eat less junk food](goal)
+      - [eat better](goal)
+      - [spend less time on my phone](goal)
+      - [don't procrastinate](goal)
+      - [Go to bed earlier](goal)
+      - [Don't stay up so late](goal)
+      - try to make some time to [meditate](goal)
+      - i ate pretty [healthy](diet) overall
+      - lots of [fruits and vegetables](diet)
+      - I ate a [salad](diet)
+      - too many [snacks](diet)
+      - too many [sweets](diet)
+      - too much [junk food](diet)
+      - a lot of [carbs](diet)
+      - too much [fatty food](diet)
+      - [Get more exercise](goal)
   - intent: out_of_scope
     examples: |
       - that's not what I want to do
